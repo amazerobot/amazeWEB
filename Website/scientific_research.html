@@ -467,64 +467,185 @@
 		</section>
 		<!-- Footer -->
 		<style>
-			.ftCo{
-				display: flex;
-				width: 100%;
-			}
-			.ft1{
-				width: 60vh;
-			}
-			.ft2{
-				margin-left: -10vh;
-				width: 30vh;
-			}
-			.ft3{
-				display: flex;
-				width: 40vh;
+			.footer {
+				background-color: transparent;
+				color: #ffffff;
+				padding: 60px 0 30px;
 			}
 
-			.ft3 .div1{
-				margin-left: 10vh;
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 15px;
+			}
+
+			.footer-info {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin-bottom: 40px;
+			}
+
+			.footer-info-grid {
+				flex: 1;
+				min-width: 250px;
+				margin-bottom: 30px;
+			}
+
+			.footer-info h4 {
+				color: #ffffff;
+				font-size: 1.2em;
+				margin-bottom: 20px;
+				font-weight: 600;
+			}
+
+			.footer-info ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.footer-info ul li {
+				margin-bottom: 10px;
+			}
+
+			.footer-info ul li a {
+				color: #a8b2bc;
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+
+			.footer-info ul li a:hover {
+				color: #ffffff;
+			}
+
+			.ft3 {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.ft3 > div {
+				flex: 1;
+			}
+
+			.ft3 img {
+				max-width: 125px;
+				height: auto;
+			}
+
+			.social-icons {
+				text-align: center;
+				margin: 30px 0;
+			}
+
+			.social-icons ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+			}
+
+			.social-icons ul li {
+				font-size: 24px;
+				color: #a8b2bc;
+				transition: color 0.3s ease;
+			}
+
+			.social-icons ul li:hover {
+				color: #ffffff;
+			}
+
+			.copyright {
+				text-align: center;
+				color: #a8b2bc;
+				padding-top: 30px;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.footer-info {
+					flex-direction: column;
+				}
+
+				.footer-info-grid {
+					width: 100%;
+				}
+
+				.ft3 {
+					flex-direction: column;
+				}
+
+				.ft3 > div {
+					margin-bottom: 20px;
+				}
 			}
 		</style>
 		<section id="footer">
-			<div class="inner">
-				<h2 class="major">联系我们</h2>
+			<div class="footer">
+				<div class="container">
+					<h2 class="major">联系我们</h2>
 
-				<div class="ftCo">
-					<div class="ft1">
-						<ul class="contact">
-							<li class="icon solid fa-home">北京市 昌平区<br>华北电力大学<br>主楼E座8层</li>
-							<li class="icon solid fa-envelope">wuhua@ncepu.edu.cn</li>
-						</ul></div>
-
-					<div class="ft2">
-						<div style="height:30px"	></div>
-						<img src="images/school.png" alt="" />
-					</div><div class="ft2">
-					<div style="height:30px"	></div>
-					<img src="images/logo.png" alt="" />
-				</div>
-
-					<div class="ft3">
-						<div>
-							<h4>请扫描企业微信</h4><img src="images/weixin.png" alt="" style="width: 125px"/>
+					<div class="footer-info slideanim">
+						<div class="col-md-3 footer-info-grid links">
+							<h4>快速跳转链接</h4>
+							<ul>
+								<li><a href="index.html">首页</a></li>
+								<li><a href="introduction.html">团队成员</a></li>
+								<li><a href="open_source.html">开源协同</a></li>
+								<li><a href="scientific_research.html">科学研究</a></li>
+								<li><a href="innovation.html">产学创新</a></li>
+								<li><a href="index.html#three1">行业标准</a></li>
+								<li><a href="index.html#four1">生态合作</a></li>
+								<li><a href="#footer">联系我们</a></li>
+							</ul>
 						</div>
-						<div class="div1">
-							<h4>请填写报名表单</h4><img src="images/bmb.jpg" alt="" style="width: 125px"/>
+						<div class="col-md-3 footer-info-grid address">
+							<h4>地址:</h4>
+							<address>
+								<ul>
+									<li>北京市 昌平区</li>
+									<li>华北电力大学主楼E座8层</li>
+									<li>电话 : 11111111111</li>
+									<li>Email : <a class="mail" href="mailto:mail@example.com">wuhua@ncepu.edu.cn</a></li>
+								</ul>
+								<img src="images/school.png" alt="" style="margin-left: 3em;margin-top: 3em;width: 4em"/>
+								<img src="images/logo.png" alt="" style="margin-left: 3em;margin-top: 3em;width: 4em"/>
+
+							</address>
 						</div>
+
+						<div class="col-md-3 footer-info-grid email">
+							<div class="ft3">
+								<div>
+									<h4>企业微信</h4><img src="images/weixin.png" alt="" style="width: 125px"/>
+								</div>
+								<div class="div1">
+									<h4>报名表单</h4><img src="images/bmb.jpg" alt="" style="width: 125px"/>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
 					</div>
 
-
-
+					<div class="social-icons">
+						<ul class="social slideanim" id="follow">
+							<li class="icon solid fa-phone"></li>
+							<li class="icon solid fa-envelope"><a href="#"></a></li>
+							<li class="icon brands fa-twitter"><a href="#"></a></li>
+							<li class="icon brands fa-facebook-f"><a href="#"></a></li>
+							<li class="icon brands fa-instagram"><a href="#"></a></li>
+						</ul>
+					</div>
+					<div class="copyright">
+						<p>&copy; 2024 AMaze. All rights reserved.<a href="http://w3layouts.com/"> AMaze </a></p>
+					</div>
 				</div>
-				<ul class="copyright">
-					<li>&copy; 2024 AMaze. All rights reserved.</li>
-					<!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-				</ul>
-
 			</div>
 		</section>
+
 	</div>
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
